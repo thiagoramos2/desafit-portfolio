@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased min-h-screen;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  }
+
+  h3 {
+    @apply text-lg sm:text-xl font-medium text-primary-700 mb-2 sm:mb-3;
+  }
+
+  p {
+    @apply text-gray-600 leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8;
+  }
+
+  .section {
+    @apply py-8 sm:py-12 md:py-16;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all duration-200 
+           transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 
+           disabled:opacity-60 disabled:cursor-not-allowed text-sm;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-600 text-white font-medium rounded-lg shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gradient-to-r from-secondary-500 to-secondary-600 text-white 
+           hover:from-secondary-600 hover:to-secondary-700 focus:ring-secondary-500 
+           shadow-sm hover:shadow-md;
+  }
+  
+  .btn-outline {
+    @apply px-4 py-2 bg-white text-gray-700 font-medium rounded-lg border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors;
+  }
+
+  .btn-danger {
+    @apply btn bg-gradient-to-r from-red-500 to-red-600 text-white 
+           hover:from-red-600 hover:to-red-700 focus:ring-red-500;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
+           transition-colors duration-200 placeholder-gray-400
+           disabled:bg-gray-100 disabled:cursor-not-allowed text-sm;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .card-gradient {
+    @apply bg-gradient-to-br from-primary-50 via-white to-secondary-50 card;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-700 hover:bg-primary-200;
+  }
+
+  .badge-secondary {
+    @apply badge bg-secondary-100 text-secondary-700 hover:bg-secondary-200;
+  }
+
+  .badge-success {
+    @apply badge bg-green-100 text-green-700 hover:bg-green-200;
+  }
+
+  .badge-warning {
+    @apply badge bg-yellow-100 text-yellow-700 hover:bg-yellow-200;
+  }
+
+  .badge-danger {
+    @apply badge bg-red-100 text-red-700 hover:bg-red-200;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-cyan-500 font-medium px-1 py-1 transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-cyan-500 border-b-2 border-cyan-500 font-medium px-1 py-1;
+  }
+
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-error {
+    @apply mt-1 text-sm text-red-600 animate-fade-in;
+  }
+
+  .form-helper {
+    @apply mt-2 text-sm text-gray-500;
+  }
+
+  .table-container {
+    @apply overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-soft;
+  }
+
+  .table {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+
+  .table-header {
+    @apply bg-primary-50 text-left text-xs font-medium text-primary-700 uppercase tracking-wider px-4 py-3;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 whitespace-nowrap text-sm text-gray-900;
+  }
+
+  .divider {
+    @apply border-t border-gray-200 my-4 sm:my-6;
+  }
+
+  .link {
+    @apply text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200;
+  }
+
+  .icon {
+    @apply w-5 h-5 text-gray-500 transition-colors duration-200;
+  }
+
+  .icon-primary {
+    @apply icon text-primary-600;
+  }
+
+  .icon-secondary {
+    @apply icon text-secondary-600;
+  }
+
+  .progress-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300;
+  }
+
+  .stat-card {
+    @apply bg-white rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-soft hover:shadow-lg transition-all duration-200;
+  }
+
+  .stat-value {
+    @apply text-2xl sm:text-3xl font-bold text-primary-600;
+  }
+
+  .stat-label {
+    @apply text-sm font-medium text-gray-500 mt-1;
+  }
+
+  .btn-cyan {
+    @apply px-4 py-2 bg-cyan-500 text-white font-medium rounded-lg shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-colors;
+  }
+
+  .btn-orange {
+    @apply px-4 sm:px-6 py-2 bg-orange-600 text-white font-medium rounded-full shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-colors transform hover:scale-105;
+  }
+  
+  /* Estilos para dispositivos móveis */
+  .mobile-menu-container {
+    @apply fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out;
+  }
+  
+  .mobile-menu {
+    @apply h-full w-full sm:w-80 bg-white shadow-xl overflow-y-auto;
+  }
+  
+  /* Utilitários responsivos */
+  .responsive-container {
+    @apply w-full px-4 sm:px-6 md:px-8 mx-auto;
+  }
+  
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6;
+  }
+  
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row;
+  }
+  
+  /* Esconder elementos em dispositivos específicos */
+  .hide-on-mobile {
+    @apply hidden sm:block;
+  }
+  
+  .hide-on-desktop {
+    @apply block sm:hidden;
+  }
+}

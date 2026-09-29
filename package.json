@@ -1,0 +1,13 @@
+{
+  "name": "desafit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run preview"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

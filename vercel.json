@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "buildCommand": "node vercel-build.js",
+  "outputDirectory": "frontend/dist",
+  "framework": null,
+  "installCommand": "echo 'Skipping root install'",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)\\.(.+)", "dest": "/$1.$2" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+} 

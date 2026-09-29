@@ -1,0 +1,16 @@
+# Ignorar diretórios do backend
+backend/
+node_modules/
+.next/
+.git/
+
+# Ignorar arquivos de configuração do Next.js
+next.config.*
+next-env.d.ts
+
+# Ignorar arquivos temporários
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log* 
